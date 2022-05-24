@@ -5,22 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <button type="button"id="button">ボタン</button>
+</head>
 <body>
-    <script>
+    <h1>超攻撃V2</h1><button id="button">開始</button> <button id="button2">サーバー取り消し</button>（開始したらワンちゃん停止ボタン押せないからよろ）
+
+<script>
 const button = document.getElementById("button");
-//ボタンを押したら端末を壊す装置を本格的に作る
+const button2 = document.getElementById("button2");
+let not = 1;
+let random = Math.random();
+
 button.addEventListener("click",function() {
-    const aa = function() {
-        
-    let aaa = "破壊中....";
-alert("これが最後の警告です。");
-    while(aaa) {
-        console.log(aaa);
+    while(not) {
+        window.open();
+        not++;
+
+        //繰り返し処理を止める
+        if(not >= 11) {
+            break;
+            window.close();
+        }
     }
-    }
-aa()
 });
-    </script>
+button2.addEventListener("click",function() {
+    window.close();
+});
+
+</script>
+<style>
+body{
+background-color: aqua;
+}
+button{
+background-color: moccasin;
+}
+</style>
 </body>
 </html>
